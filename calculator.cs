@@ -82,6 +82,9 @@ public class calculator : MonoBehaviour{
         string tmp = "";
         for (int i = 0; i < str.Length; i++)
         {
+            if (i == 0 && str[i] == '-'){
+                str = "0" + str;//当第一个字符为‘-’号时，在前面加‘0’
+            }
             if (i >= str.Length - 1)
             {
                 tmp += str[i];
